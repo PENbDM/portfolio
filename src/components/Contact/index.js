@@ -102,7 +102,7 @@ const Contact = () => {
           Hyde
           <br />
           <br />
-          <span>freelancerslobodan@gmail.com</span>
+          <span>dimapenjob57@gmail.com</span>
         </div>
         <div className="map-wrap">
           <MapContainer center={[53.4472, -2.0961]} zoom={13}>
