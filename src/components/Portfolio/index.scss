@@ -1,8 +1,3 @@
-.wrapper {
-  display: flex;
-
-  justify-content: space-between;
-}
 .portfolio-page {
   padding-left: 100px;
   padding-right: 50px;
@@ -19,18 +14,50 @@
   .images-container {
     padding-right: 150px;
     display: flex;
+    padding-left: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 100px;
+
+    @media screen and (max-width: 1622px) {
+      margin: 0 auto;
+      padding-left: 50px;
+      flex-direction: column;
+      align-items: center;
+      max-width: 700px;
+      width: 100%;
+      height: 700px;
+    }
+    @media screen and (max-width: 1200px) {
+      .image-box {
+        width: 100%; // Растягиваем на всю ширину .images-container
+        height: auto; // Автоматическая высота
+        max-width: none; // Убираем ограничение максимальной ширины
+        margin-bottom: 40px;
+      }
+    }
   }
 
   .image-box {
     position: relative;
-    flex: 1 1 20%;
+    flex: 1 1;
     height: 400px;
     overflow: hidden;
     border-radius: 10px;
-    max-width: 750px;
+    max-width: 700px;
+
+    @media screen and (max-width: 1622px) {
+      height: 700px;
+      width: 100%; /* Изменено с 700px на 100% */
+      margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 100%; // Растягиваем на всю ширину .images-container
+      height: auto; // Автоматическая высота
+      max-width: none; // Убираем ограничение максимальной ширины
+      margin-bottom: 40px;
+    }
 
     .portfolio-image {
       position: absolute;
@@ -39,7 +66,6 @@
       height: 100%;
       object-fit: cover;
     }
-
     .content {
       position: absolute;
       width: 100%;
@@ -116,5 +142,83 @@
       bottom: 0;
       background: transparent;
     }
+
+    @media screen and (max-width: 1201px) {
+      width: 500px;
+      height: 500px;
+      margin-bottom: 40px;
+    }
+  }
+}
+@media screen and (max-width: 905px) {
+  .portfolio-page .images-container {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  .portfolio-page .image-box {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .portfolio-page .images-container {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .portfolio-page .image-box {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 571px) {
+  .portfolio-page .images-container {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .portfolio-page .image-box {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 474px) {
+  .portfolio-page.container {
+    padding-left: 0;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 427px) {
+  .portfolio-page.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .portfolio-page .images-container {
+    padding-right: 0;
+    padding: 0;
+
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .portfolio-page .images-container {
+    margin: 0 auto 0 0;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 393px) {
+  .portfolio-page .images-container {
+    margin: 0 auto 0 0;
+    padding-left: 10px;
   }
 }
